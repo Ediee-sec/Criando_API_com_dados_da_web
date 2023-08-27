@@ -8,4 +8,4 @@
   3. *Alterar na pasta doc a service account*
 
 * ## Fluxograma
-<img src="doc/img.png">
+<img src="doc/workflow.png">
