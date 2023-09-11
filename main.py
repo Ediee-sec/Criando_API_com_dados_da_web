@@ -17,8 +17,9 @@ def extract_and_transform_data():
 
 #Carrega os dados em uma tabela no bigquery, sempre da o replace nos dados
 def load_data_to_bigquery():
-    pandas_gbq.context.credentials = crecentials_gcp.conn_gcp()
-    pandas_gbq.context.project = "emersondai254"
+    
+    #Cria a conexão/contexto com o gcp
+    crecentials_gcp.creating_context_gcp()
 
     pandas_gbq.to_gbq(extract_and_transform_data(), 'homol.Dados_Endereco_Maryland', project_id='emersondai254', if_exists='replace',\
                         table_schema=schema.type_gcp())
